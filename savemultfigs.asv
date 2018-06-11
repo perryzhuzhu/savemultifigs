@@ -23,7 +23,7 @@ function varargout = savemultfigs(varargin)
 
 % Edit the above text to modify the response to help savemultfigs
 
-% Last Modified by GUIDE v2.5 12-Jun-2018 01:23:57
+% Last Modified by GUIDE v2.5 12-Jun-2018 00:27:20
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -91,20 +91,19 @@ if exist(cfg_filepath,'file')
     % set uicontrols' attributes accordingly
     child = get(findobj('Tag','uipanelFigType'),'children');
     for i=1:length(child)
-        set(child(i),'Value',0)
+        
         for j=1:length(filetype)
             if strcmp(get(child(i),'String'), filetype{j})
-                set(child(i),'Value',1)
-%                 sprintf(['matched ' get(child(i),'String') '&' filetype{j}])
+                set(child(j),'Value',1)
+                sprintf(['matched ' get(child(i),'String') '&' filetype{j}])
             elseif strcmp(get(child(i),'String'),'eps') && strcmp(filetype{j},'epsc')
-                set(child(i),'Value',1)
-%                 sprintf(['matched ' get(child(i),'String') '&' filetype{j}])
-            else
+                set(child(j),'Value',1)
+                sprintf(['matched ' get(child(i),'String') '&' filetype{j}])
+            else 
 %                 sprintf(['unmatched ' get(child(i),'String') '&' filetype{j}])
             end
         end
     end
-    set(findobj(hObject,'Tag','editOutputDir'),'String',pn);
     set(findobj(hObject,'Tag','checkboxDirType'),'Value',saveinsubdir);
     set(findobj(hObject,'Tag','checkboxSaveConfig'),'Value',saveConfig);
     
@@ -633,3 +632,7 @@ if saveConfig
     ini.AddKeys('basic','savecfg',saveConfig); 
     ini.WriteFile(handles.cfg_filepath);
 end
+
+
+
+
