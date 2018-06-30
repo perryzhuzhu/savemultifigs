@@ -10,8 +10,8 @@ Some bugs are fixed, and some new features are added.
 
 - To do list:
 
-	- [] Function: remove the title of figures when saving. Or change the title's content (trivial)?
-	- [] API: run in command line mode. commandline params support, config file support.
+	- [ ] Function: remove the title of figures when saving. Or change the title's content (trivial)?
+	- [ ] API: run in command line mode. commandline params support, config file support.
 
 - bugs:
 
