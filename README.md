@@ -1,12 +1,18 @@
-待完成功能：
+# Savemultifigs+
 
-- 去除title的功能选项（用于论文图片的保存），或者修改title的内容？（不是很重要）
+This is the updated version based on [Save Multiple Figures in a click](https://ww2.mathworks.cn/matlabcentral/fileexchange/35082-save-multiple-figures-in-a-click).
 
-- 直接命令行运行一个程序，调用配置文件，保存所有的figure到不同的格式中
-
-待解决问题：
-如果是plotyy这种，保存得到的图片只有一半的坐标系。另外一半的坐标系不见了。。。
-而用文件》另存为保存得到的fig文件则是正常的。
+Some bugs are fixed, and some new features are added.
 
 
 
+---
+
+- To do list:
+
+	- [] Function: remove the title of figures when saving. Or change the title's content (trivial)?
+	- [] API: run in command line mode. commandline params support, config file support.
+
+- bugs:
+
+- If the figure is plotted using `plotyy`, only one axis is saved. Another axis is missing. But if you use "File>Save As", you can get figure with two axes.

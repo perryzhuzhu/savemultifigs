@@ -1,9 +1,0 @@
-figs_libpath = mfilename('fullpath');
-
-SavemultifigsPath = getSavemultifigsPath();
-IniPathDefault = fullfile(SavemultifigsPath,'figs_config.ini')
-IniPath = fullfile(pwd,'figs_config.ini')
-
-if exist(fullfile(pwd,'figs_config.ini'),'file')
-    mfilename('fullpath')
-end
